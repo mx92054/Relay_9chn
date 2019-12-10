@@ -90,6 +90,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 	int i ;
+	int adr[] = {0, 1, 7, 6, 2, 3, 4, 5, 6, 7};
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -144,9 +145,9 @@ int main(void)
 			for(i = 0 ; i < 8 ; i++)
 			{
 				if ( mblock1.ptrRegs[i] )
-					HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0 << i, GPIO_PIN_SET) ;
+					HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0 << adr[i], GPIO_PIN_SET) ;
 				else
-					HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0 << i, GPIO_PIN_RESET) ;
+					HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0 << adr[i], GPIO_PIN_RESET) ;
 			}
 			if ( mblock1.ptrRegs[8] )
 					HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0, GPIO_PIN_SET) ;

@@ -18,7 +18,7 @@ uint8_t RxChar ;
  * ******************************************************/
 void ModbusSvr_block_init(Modbus_block *pblk, UART_HandleTypeDef* pUSARTx)
 {
-    pblk->station = 1;
+    pblk->station = 2;
     pblk->baudrate = 115200;
 
     pblk->uCoilStartAdr = 0;
